@@ -1,0 +1,11 @@
+package ui;
+public class SimpleClass extends DriverClass{
+	
+	
+	public void launchApp() {
+		
+		driverFirefox.get("https://www.iherb.com");
+		
+		
+	}
+}

@@ -1,0 +1,73 @@
+package my_Automation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		
+//driverChrome.get("https://www.darwin.md");
+		
+		ChromeDriver driverChrome = new ChromeDriver();
+//		driverChrome.get("https://enter.online/");
+//		driverChrome.manage().window().maximize();
+//		
+//		//ID Locator
+//		driverChrome.findElement(By.id("search")).click();
+//		driverChrome.findElement(By.id("search")).sendKeys("aparat");
+//		driverChrome.findElement(By.id("search-icon")).click();
+//		
+		
+		//Class Name Locator
+//		driverChrome.get("https://absolvent.club/");
+//		driverChrome.manage().window().maximize();
+//		driverChrome.findElement(By.className("nav-link")).click();
+//		
+		
+		//Name Locator
+//		driverChrome.get("https://porsche.com/");
+//		driverChrome.manage().window().maximize();
+//		driverChrome.findElement(By.name("steering-wheel")).click();
+				
+		//Link Text Locator
+//		driverChrome.get("https://selenium.dev/documentation");
+//		driverChrome.manage().window().maximize();
+//		driverChrome.findElement(By.linkText("W3C WebDriver specification")).click();
+
+		//PartialText Locator
+		driverChrome.get("https://selenium.dev/documentation");
+		driverChrome.manage().window().maximize();
+		driverChrome.findElement(By.partialLinkText("W3C WebDriver")).click();
+		
+//		driverChrome.manage().window().maximize();		
+//		driverChrome.findElement(By.cssSelector("body > div.container > div.fixed-top-header > div > header > div.form-wrapper.mainmenu.w-100.rounded-0.d-flex.align-items-center > a")).click();
+//		
+//			
+//		driverChrome.findElement(By.cssSelector("#main > section.blogs > div > nav > ol > li:nth-child(1) > a")).click();
+//		
+//		driverChrome.findElement(By.cssSelector("#main > div > div.container > section.custom-categories.mb-0 > div > div > a.swiper-slide.swiper-slide-active > div > img")).click();
+//		
+//		driverChrome.findElement(By.cssSelector("#main > section.products > div > div > div > div:nth-child(2) > figure > div.grid-item > div > a > img")).click();
+//		
+//		driverChrome.findElement(By.cssSelector("#main > section.presentation > div > div > div.col-xl.d-none.d-xl-block > div > div.colors-wrapper.mb-8 > div > a:nth-child(2) > div")).click();
+//		
+//		driverChrome.findElement(By.cssSelector("#main > section.presentation > div > div > div.col-xl.d-none.d-xl-block > div > div.colors-wrapper.mb-8 > div > a:nth-child(5) > div")).click();
+//		
+//		driverChrome.findElement(By.cssSelector("#main > section.presentation > div > div > div.col-xl.d-none.d-xl-block > div > div.colors-wrapper.mb-8 > div > a:nth-child(1) > div")).click();
+//		
+//		driverChrome.findElement(By.cssSelector("#main > section.pb-28 > div > div > div.col-12.col-xxl-9.px-8 > nav > ol > li:nth-child(2) > a")).click();
+//		
+//		driverChrome.findElement(By.cssSelector("#main > section.products > div > div > div > div:nth-child(10) > figure > div.grid-item > div.img-wrap.w-100 > a > img")).click();
+//		
+//		driverChrome.findElement(By.cssSelector("#main > section.presentation > div > div > div.col-xl.d-none.d-xl-block > div > div.colors-wrapper.mb-8 > div > a:nth-child(3) > div")).click();
+//		
+//		driverChrome.findElement(By.cssSelector("#main > section.presentation > div > div > div.col-12.col-md-6.col-xl-4.col-xxl-3.d-md-flex.flex-md-column > div.price-wrapper.order-md-1.w-100.rounded-8.p-16.mb-8 > div.m-0 > a")).click();
+//				
+	}
+
+}

@@ -1,0 +1,47 @@
+package my_Automation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class gg {
+    public static void main(String[] args) {
+        // Setarea proprietăților pentru driverul Selenium
+        System.setProperty("webdriver.chrome.driver", "C:\\path\\to\\chromedriver.exe");
+        
+        // Inițializarea driverului Chrome
+        WebDriver driver = new ChromeDriver();
+
+        // Deschiderea paginii web eBay Contact Us
+        driver.get("https://www.ebay.com/help/account/default/contacting-ebay-customer-service?id=4379");
+
+        // Așteptare implicită pentru așteptarea elementelor
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        // Identificarea și completarea câmpurilor de text
+        WebElement nameField = driver.findElement(By.cssSelector("input[name='firstname']"));
+        nameField.sendKeys("John");
+
+        WebElement emailField = driver.findElement(By.cssSelector("input[name='email']"));
+        emailField.sendKeys("johndoe@example.com");
+
+        WebElement messageField = driver.findElement(By.cssSelector("textarea[name='message']"));
+        messageField.sendKeys("Aceasta este un mesaj de contact pentru eBay.");
+
+        // Trimiterea formularului prin apăsarea tasei Enter pe ultimul câmp
+        messageField.sendKeys(Keys.ENTER);
+
+//        // Așteptăm un timp pentru a vedea rezultatul
+//        try {
+//            Thread.sleep(5000); // Așteaptă 5 secunde
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+
+        // Închiderea browserului
+        driver.quit();
+    }
+}

@@ -1,0 +1,28 @@
+package my_Automation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class gg {
+    public static void main(String[] args) throws InterruptedException {
+    	ChromeDriver driverChrome = new ChromeDriver();
+		driverChrome.get("https://magento.softwaretestingboard.com");
+		driverChrome.manage().window().maximize();
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div[3]/div[3]/div/div/ol/li[2]/div/a/span/span/img")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"option-label-size-143-item-168\"]")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"option-label-color-93-item-60\"]")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"qty\"]")).clear();
+		driverChrome.findElement(By.xpath("//*[@id=\"qty\"]")).sendKeys("3");	
+		driverChrome.findElement(By.xpath("//*[@id=\"product-addtocart-button\"]/span")).click();
+		Thread.sleep(5000);
+		driverChrome.findElement(By.xpath("//a[@class='action showcart']")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"minicart-content-wrapper\"]/div[2]/div[5]/div/a/span")).click();
+//		driverChrome.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div/div/div/input")).sendKeys("auto_ANA9");
+//		driverChrome.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div/div/div/div[2]/div[2]/div[2]/form/button[2]/span/span")).click();
+//		driverChrome.findElement(By.xpath("/html/body/div[2]/header/div/a/span")).click();
+    }
+}
