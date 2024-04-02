@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class ggg {
     public static void main(String[] args) throws InterruptedException {
-   
+    	
     	ChromeDriver driverChrome = new ChromeDriver();
 		driverChrome.get("https://magento.softwaretestingboard.com");
 		driverChrome.manage().window().maximize();
@@ -36,7 +36,11 @@ public class ggg {
 //		actions.moveToElement(new_page);
 //		actions.perform();
 		
-		driverChrome.findElement(By.xpath("//*[@id=\"ROOQPH9\"]")).sendKeys("str. Valea Trandafirilor");		
+		driverChrome.findElement(By.xpath("//*[@id=\"WY1NBD1\"]")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"WY1NBD1\"]")).sendKeys("str. Valea Trandafirilor");
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form[2]/div/fieldset/div/div[1]/div/input")).click();
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form[2]/div/fieldset/div/div[1]/div/input")).sendKeys("str. Valea Trandafirilor");		
 	
     }
 }
