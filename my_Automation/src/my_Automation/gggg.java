@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class gggg {
+	//Codul de plasare a unei comenzi pentru un utilizator ne-logat
 	public static void main(String[] args) throws InterruptedException {
 		
 		ChromeDriver driverChrome = new ChromeDriver();
@@ -76,7 +77,6 @@ public class gggg {
 		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[2]/div/div[3]/form/div[3]/div/button/span")).click();
 		
 		Thread.sleep(3000);
-		
 		driverChrome.findElement(By.xpath("/html/body/div[3]/main/div[2]/div/div[3]/div[4]/ol/li[3]/div/form/fieldset/div[1]/div/div/div[2]/div[2]/div[4]/div/button")).click();
 		
 

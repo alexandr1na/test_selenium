@@ -16,38 +16,49 @@ public class Home_8 {
 
 	public static void main(String[] args) throws InterruptedException {
 
-//      25 dropdowns_Auto-sugestion
+////      25 dropdowns_Auto-sugestion
 		ChromeDriver driverChrome = new ChromeDriver();
-		driverChrome.get("https://www.jw.org/ro/");
+//		driverChrome.get("https://www.jw.org/ro/");
+//		driverChrome.manage().window().maximize();
+//		driverChrome.findElement(By.xpath("/html/body/div[5]/div/div/header/div[4]/a[1]/span[3]")).click();
+//		Thread.sleep(4000);
+//		driverChrome.findElement(By.xpath("/html/body/div[11]/div/div/div[2]/div/form/div/div[1]/div/input")).sendKeys("Italiana");
+//		Thread.sleep(4000);
+//		driverChrome.findElement(By.xpath("/html/body/div[11]/div/div/div[2]/div/form/div/div[1]/div/input")).click();
+//		Thread.sleep(4000);
+//		driverChrome.findElement(By.xpath("/html/body/div[11]/div/div/div[2]/div/form/div/div[1]/div/input")).sendKeys(Keys.ARROW_DOWN);
+//		Thread.sleep(4000);
+//		driverChrome.findElement(By.xpath("/html/body/div[11]/div/div/div[2]/div/form/div/div[1]/div/input")).sendKeys(Keys.ENTER);
+//		Thread.sleep(4000);
+//		driverChrome.findElement(By.xpath("//*[@id=\"mid1011200\"]/div[1]/div/div/button[2]")).click();
+//		Thread.sleep(4000);
+//		
+////      27. Scrolling
+//		WebElement new_page = driverChrome.findElement(By.xpath("/html/body/div[7]/div/div/main/div[4]/div/a[5]/div"));
+//		Actions actions = new Actions(driverChrome);
+//		actions.moveToElement(new_page);
+//		actions.perform();
+//		
+////      33. right click
+//		Thread.sleep(4000);
+//		Actions rightClick = new Actions(driverChrome);
+//		rightClick.contextClick(new_page).perform();
+//		
+//		Thread.sleep(4000);
+//		driverChrome.findElement(By.xpath("/html/body/div[7]/div/div/main/div[4]/div/a[5]/div")).click();
+//		Thread.sleep(4000);
+//		driverChrome.quit();
+		
+//		28 Radio Butoane
+		driverChrome.get("https://www.singaporeair.com/en_UK/sg/home#/book/bookflight");
 		driverChrome.manage().window().maximize();
-		driverChrome.findElement(By.xpath("/html/body/div[5]/div/div/header/div[4]/a[1]/span[3]")).click();
-		Thread.sleep(4000);
-		driverChrome.findElement(By.xpath("/html/body/div[11]/div/div/div[2]/div/form/div/div[1]/div/input")).sendKeys("Italiana");
-		Thread.sleep(4000);
-		driverChrome.findElement(By.xpath("/html/body/div[11]/div/div/div[2]/div/form/div/div[1]/div/input")).click();
-		Thread.sleep(4000);
-		driverChrome.findElement(By.xpath("/html/body/div[11]/div/div/div[2]/div/form/div/div[1]/div/input")).sendKeys(Keys.ARROW_DOWN);
-		Thread.sleep(4000);
-		driverChrome.findElement(By.xpath("/html/body/div[11]/div/div/div[2]/div/form/div/div[1]/div/input")).sendKeys(Keys.ENTER);
-		Thread.sleep(4000);
-		driverChrome.findElement(By.xpath("//*[@id=\"mid1011200\"]/div[1]/div/div/button[2]")).click();
-		Thread.sleep(4000);
+		driverChrome.findElement(By.xpath("//*[@id=\"sia-header\"]/sia-header/div[2]/sia-cookie/div/div/div/div[2]/button")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"hwidget\"]/div[2]/div/div[1]/li[2]/div/div/span")).click();		
+		System.out.println(driverChrome.findElement(By.xpath("//*[@id=\"eticketNumberRadio\"]")).isSelected());
+		Thread.sleep(3000);
+		driverChrome.findElement(By.xpath("//*[@id=\"eticketNumberRadio\"]")).click();
+		System.out.println(driverChrome.findElement(By.xpath("//*[@id=\"eticketNumberRadio\"]")).isSelected());
 		
-//      27. Scrolling
-		WebElement new_page = driverChrome.findElement(By.xpath("/html/body/div[7]/div/div/main/div[4]/div/a[5]/div"));
-		Actions actions = new Actions(driverChrome);
-		actions.moveToElement(new_page);
-		actions.perform();
-		
-//      33. right click
-		Thread.sleep(4000);
-		Actions rightClick = new Actions(driverChrome);
-		rightClick.contextClick(new_page).perform();
-		
-		Thread.sleep(4000);
-		driverChrome.findElement(By.xpath("/html/body/div[7]/div/div/main/div[4]/div/a[5]/div")).click();
-		Thread.sleep(4000);
-		driverChrome.quit();
 	}
 }		
 		

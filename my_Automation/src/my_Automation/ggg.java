@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 
 public class ggg {
+	//Codul de plasare a unei comenzi pentru un utilizator logat
     public static void main(String[] args) throws InterruptedException {
     	
     	ChromeDriver driverChrome = new ChromeDriver();
@@ -31,17 +32,39 @@ public class ggg {
 		driverChrome.findElement(By.xpath("//*[@id=\"maincontent\"]/div[3]/div/div[3]/div[1]/ul/li[1]/button")).click();
 		Thread.sleep(3000);
 
-//		WebElement new_page = driverChrome.findElement(By.xpath("//*[@id=\"ROOQPH9\"]")).sendKeys("str. Valea Trandafirilor");
-//		Actions actions = new Actions(driverChrome);
-//		actions.moveToElement(new_page);
-//		actions.perform();
+		//Fill in 'Street Address' field
+		driverChrome.findElement(By.xpath("//input[@name='street[0]']")).click();	
+		driverChrome.findElement(By.xpath("//input[@name='street[0]']")).sendKeys("Hogwarts School of Magic and Witchcraft, magic street 1");
 		
-		driverChrome.findElement(By.xpath("//*[@id=\"WY1NBD1\"]")).click();
-		driverChrome.findElement(By.xpath("//*[@id=\"WY1NBD1\"]")).sendKeys("str. Valea Trandafirilor");
+        Thread.sleep(3000);
 		
-		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form[2]/div/fieldset/div/div[1]/div/input")).click();
-		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form[2]/div/fieldset/div/div[1]/div/input")).sendKeys("str. Valea Trandafirilor");		
-	
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[4]/div/input")).click();
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[4]/div/input")).sendKeys("Alebama");
+		
+		Thread.sleep(3000);
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[5]/div/select")).click();
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[5]/div/select")).sendKeys(Keys.ARROW_DOWN);
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[5]/div/select")).sendKeys(Keys.ENTER);
+		
+		Thread.sleep(3000);
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[7]/div/input")).sendKeys("20444");
+		
+		Thread.sleep(3000);
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[9]/div/input")).sendKeys("2044456789");
+		
+		Thread.sleep(3000);
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[2]/div/div[3]/form/div[1]/table/tbody/tr[1]/td[1]/input")).click();		
+		System.out.println(driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[2]/div/div[3]/form/div[1]/table/tbody/tr[1]/td[1]/input")).isSelected());
+		
+		Thread.sleep(3000);
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[2]/div/div[3]/form/div[3]/div/button")).click();
+		
+		Thread.sleep(3000);
+		driverChrome.findElement(By.cssSelector("#checkout-payment-method-load > div > div > div.payment-method._active > div.payment-method-content > div.actions-toolbar > div > button > span")).click();
     }
 }
   

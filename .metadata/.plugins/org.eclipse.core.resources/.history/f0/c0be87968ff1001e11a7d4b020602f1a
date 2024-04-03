@@ -1,0 +1,70 @@
+package my_Automation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+
+public class ggg {
+	//Codul de plasare a unei comenzi pentru un utilizator logat
+    public static void main(String[] args) throws InterruptedException {
+    	
+    	ChromeDriver driverChrome = new ChromeDriver();
+		driverChrome.get("https://magento.softwaretestingboard.com");
+		driverChrome.manage().window().maximize();
+		driverChrome.findElement(By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]")).click();
+		driverChrome.findElement(By.xpath("//input[@id='email']")).sendKeys("busuioc.ana333@gmail.com");
+		driverChrome.findElement(By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']")).sendKeys("auto_ANA9");
+		driverChrome.findElement(By.xpath("//fieldset[@class='fieldset login']//span[contains(text(),'Sign In')]")).click();
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div[3]/div[3]/div/div/ol/li[2]/div/a/span/span/img")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"option-label-size-143-item-168\"]")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"option-label-color-93-item-60\"]")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"qty\"]")).clear();
+		driverChrome.findElement(By.xpath("//*[@id=\"qty\"]")).sendKeys("3");	
+		driverChrome.findElement(By.xpath("//*[@id=\"product-addtocart-button\"]/span")).click();
+		Thread.sleep(5000);
+		driverChrome.findElement(By.xpath("//a[@class='action showcart']")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"minicart-content-wrapper\"]/div[2]/div[5]/div/a/span")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"maincontent\"]/div[3]/div/div[3]/div[1]/ul/li[1]/button")).click();
+		Thread.sleep(3000);
+
+		//Fill in 'Street Address' field
+		driverChrome.findElement(By.xpath("//input[@name='street[0]']")).click();	
+		driverChrome.findElement(By.xpath("//input[@name='street[0]']")).sendKeys("Hogwarts School of Magic and Witchcraft, magic street 1");
+		
+        Thread.sleep(3000);
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[4]/div/input")).click();
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[4]/div/input")).sendKeys("Chisinau");
+		
+		Thread.sleep(3000);
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[5]/div/select")).click();
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[5]/div/select")).sendKeys(Keys.ARROW_DOWN);
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[5]/div/select")).sendKeys(Keys.ENTER);
+		
+		Thread.sleep(3000);
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[7]/div/input")).sendKeys("20444");
+		
+		Thread.sleep(3000);
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[1]/div[2]/form/div/div[9]/div/input")).sendKeys("2044456789");
+		
+		Thread.sleep(3000);
+		
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[2]/div/div[3]/form/div[1]/table/tbody/tr[1]/td[1]/input")).click();		
+		System.out.println(driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[2]/div/div[3]/form/div[1]/table/tbody/tr[1]/td[1]/input")).isSelected());
+		
+		Thread.sleep(3000);
+		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div[3]/div[4]/ol/li[2]/div/div[3]/form/div[3]/div/button")).click();
+		
+		Thread.sleep(3000);
+		driverChrome.findElement(By.cssSelector("#checkout-payment-method-load > div > div > div.payment-method._active > div.payment-method-content > div.actions-toolbar > div > button > span")).click();
+    }
+}
+  
