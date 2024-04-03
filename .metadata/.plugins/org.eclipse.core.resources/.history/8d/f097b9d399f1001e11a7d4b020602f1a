@@ -1,0 +1,57 @@
+package my_Automation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+
+public class Test_Case_0 {
+    public static void main(String[] args) throws InterruptedException {
+    	//Codul de creare a unui cont nou -> se va rula doar o data, la inceput
+    	ChromeDriver driverChrome = new ChromeDriver();
+		driverChrome.get("https://magento.softwaretestingboard.com");
+		driverChrome.manage().window().maximize();
+		driverChrome.findElement(By.xpath("//div[@class='panel header']//a[normalize-space()='Create an Account']")).click();
+		driverChrome.findElement(By.cssSelector("#firstname")).sendKeys("ANA");
+		Thread.sleep(3000);
+		driverChrome.findElement(By.xpath("//input[@id='lastname']")).sendKeys("BUSUIOC");
+		driverChrome.findElement(By.xpath("//input[@id='email_address']")).sendKeys("busuioc.ana333@gmail.com");
+		driverChrome.findElement(By.xpath("//input[@id='password']")).sendKeys("auto_ANA9");
+		driverChrome.findElement(By.xpath("//input[@id='password-confirmation']")).sendKeys("auto_ANA9");
+		driverChrome.findElement(By.xpath("//button[@title='Create an Account']")).click();
+		Thread.sleep(3000);
+    }
+ }
+		//driverChrome.findElement(By.xpath("//a[@aria-label='store logo']//img")).click();
+		
+//		driverChrome.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div[3]/div[3]/div/div/ol/li[2]/div/a/span/span/img")).click();
+//		driverChrome.findElement(By.xpath("//*[@id=\"option-label-size-143-item-168\"]")).click();
+//		driverChrome.findElement(By.xpath("//*[@id=\"option-label-color-93-item-60\"]")).click();
+//		driverChrome.findElement(By.xpath("//*[@id=\"qty\"]")).clear();
+//		driverChrome.findElement(By.xpath("//*[@id=\"qty\"]")).sendKeys("3");	
+//		driverChrome.findElement(By.xpath("//*[@id=\"product-addtocart-button\"]/span")).click();
+//		Thread.sleep(5000);
+//		driverChrome.findElement(By.xpath("//a[@class='action showcart']")).click();
+//		driverChrome.findElement(By.xpath("//*[@id=\"minicart-content-wrapper\"]/div[2]/div[5]/div/a/span")).click();
+//		driverChrome.findElement(By.xpath("//*[@id=\"maincontent\"]/div[3]/div/div[3]/div[1]/ul/li[1]/button")).click();
+//		Thread.sleep(3000);
+//		driverChrome.findElement(By.xpath("//*[@id=\"customer-email\"]")).sendKeys("busuioc.ana333@gmail.com");
+//		
+//		Thread.sleep(2000);
+//		WebElement new_page = driverChrome.findElement(By.cssSelector("#JGXC4YH"));
+//		Actions actions = new Actions(driverChrome);
+//		actions.moveToElement(new_page);
+//		actions.perform();
+//		driverChrome.findElement(By.cssSelector("#JGXC4YH")).sendKeys("ANA");
+//		Thread.sleep(3000);
+//		driverChrome.findElement(By.xpath("//*[@id=\"O7809NQ\"]")).sendKeys("BUSUIOC");
+//		Thread.sleep(3000);
+//		driverChrome.findElement(By.xpath("//*[@id=\"ROOQPH9\"]")).sendKeys("str. Valea Trandafirilor");
+//		
+		
+//		driverChrome.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div/div/div/div[2]/div[2]/div[2]/form/button[2]/span/span")).click();
+//		driverChrome.findElement(By.xpath("/html/body/div[2]/header/div/a/span")).click();
+  
